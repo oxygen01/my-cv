@@ -62,6 +62,8 @@ const Container = () => {
                   title="Personal data"
                   icon={<InfoOutlinedIcon />}
                   list={perosnalData}
+                  bgColor={theme.palette.primary.light}
+                  borderRadius={16}
                 />
               </Grid>
               <Grid item xs>
@@ -69,7 +71,8 @@ const Container = () => {
                   title="Education"
                   icon={<SchoolOutlinedIcon />}
                   list={education}
-                  bgColor={theme.palette.primary.light}
+                  bgColor={theme.palette.secondary.light}
+                  borderRadius={16}
                 />
               </Grid>
             </Grid>

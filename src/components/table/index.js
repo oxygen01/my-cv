@@ -5,9 +5,9 @@ import { string } from "postcss-selector-parser"
 import { CustomPaper } from ".."
 import SubHeader from "../_subheaderComponent"
 
-const TableContent = ({ title, icon, list }) => {
+const TableContent = ({ title, icon, list, ...other }) => {
   return (
-    <CustomPaper>
+    <CustomPaper {...other}>
       <SubHeader avatar={icon} title={title} />
       <Table>
         <TableBody>

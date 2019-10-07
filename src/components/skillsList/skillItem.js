@@ -31,7 +31,7 @@ const SkillItem = ({ title, value }) => (
     {value && (
       <BorderLinearProgress
         variant="determinate"
-        color="secondary"
+        color="primary"
         value={value}
       />
     )}
