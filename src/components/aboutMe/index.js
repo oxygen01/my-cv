@@ -3,7 +3,7 @@ import { CustomPaper } from ".."
 import { graphql, useStaticQuery } from "gatsby"
 import { Typography } from "@material-ui/core"
 import PermIdentityOutlinedIcon from "@material-ui/icons/PermIdentityOutlined"
-import SubHeader from "../subheaderComponent"
+import SubHeader from "../_subheaderComponent"
 
 const query = graphql`
   query AboutMeDataQuery {
