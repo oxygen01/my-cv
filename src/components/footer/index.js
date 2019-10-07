@@ -1,9 +1,9 @@
 import React from "react"
 import { CustomPaper } from ".."
-import ProgressItem from "../ProgressItem/"
+import SkillsList from "../skillsList"
 const Footer = () => (
   <CustomPaper style={{ padding: 16 }}>
-    <ProgressItem />
+    <SkillsList />
   </CustomPaper>
 )
 

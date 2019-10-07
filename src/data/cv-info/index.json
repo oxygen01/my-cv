@@ -1,5 +1,6 @@
 {
-  "perosnalData": [{
+  "perosnalData": [
+    {
       "key": "Date of birth",
       "value": "05.1990"
     },
@@ -16,26 +17,31 @@
       "value": "10.2015"
     }
   ],
-  "education": [{
-    "date": {
-      "from": "10.2008",
-      "to": "09.2015"
+  "education": [
+    {
+      "date": {
+        "from": "10.2008",
+        "to": "09.2015"
+      },
+      "location": "Albaath University, Homs/ Syria",
+      "title": "Bachelor degree in Informatics engineering",
+      "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
     },
-    "location": "Albaath University, Homs/ Syria",
-    "title": "Bachelor degree in Informatics engineering",
-    "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
-  }, {
-    "date": {
-      "from": "07.1996",
-      "to": "07.2008"
-    },
-    "location": "Hama/ Syria",
-    "title": "High school, hama/ Syria"
-  }],
-  "projects": [{
-    "title": "Institution",
-    "titleDetails": "Win program",
-    "technologies": ["PL/SQL", "C#"],
-    "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
-  }]
+    {
+      "date": {
+        "from": "07.1996",
+        "to": "07.2008"
+      },
+      "location": "Hama/ Syria",
+      "title": "High school, hama/ Syria"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Institution",
+      "titleDetails": "Win program",
+      "technologies": ["PL/SQL", "C#"],
+      "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
+    }
+  ]
 }

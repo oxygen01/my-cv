@@ -1,6 +1,5 @@
 import React from "react"
 import { CustomPaper } from ".."
-import { Typography } from "@material-ui/core"
 import SubHeader from "../_subheaderComponent"
 import ListContentItem from "./listContentItem"
 
