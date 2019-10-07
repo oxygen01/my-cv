@@ -8,8 +8,8 @@ const ListContent = ({ title, icon, list }) => {
   return (
     <CustomPaper>
       <SubHeader avatar={icon} title={title} />
-      {list.map(item => (
-        <ListContentItem item={item} />
+      {list.map((item, index) => (
+        <ListContentItem key={index} item={item} />
       ))}
     </CustomPaper>
   )

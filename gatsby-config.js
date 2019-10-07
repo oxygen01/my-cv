@@ -12,15 +12,13 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-plugin-material-ui",
-      options: {
-        pathToStylesProvider: `src/components/themeProvider/`,
-      },
+      options: {},
     },
-    `gatsby-transformer-json`,
+    "gatsby-transformer-json",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `data`,
+        name: "data",
         path: `${__dirname}/src/data/`,
       },
     },

@@ -6,6 +6,8 @@ import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined"
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined"
 
 import { graphql } from "gatsby"
+import { ThemeProvider } from "@material-ui/styles"
+import theme from "../components/themeProvider"
 
 export const query = graphql`
   query CVInfoDataQuery {
@@ -32,31 +34,35 @@ const Container = () => {
   } = useStaticQuery(query)
 
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <Header />
-      </Grid>
-      <Grid item xs={12}>
-        <AboutMe />
-      </Grid>
-      <Grid item xs={12}>
-        <Table
-          title="Personal data"
-          icon={<InfoOutlinedIcon />}
-          list={perosnalData}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <ListContent
-          title="Education"
-          icon={<SchoolOutlinedIcon />}
-          list={education}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <Footer />
-      </Grid>
-    </Grid>
+    <ThemeProvider theme={theme}>
+      <div style={{ backgroundColor: "#F1F3F4" }}>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Header />
+          </Grid>
+          <Grid item xs={12}>
+            <AboutMe />
+          </Grid>
+          <Grid item xs={12}>
+            <Table
+              title="Personal data"
+              icon={<InfoOutlinedIcon />}
+              list={perosnalData}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <ListContent
+              title="Education"
+              icon={<SchoolOutlinedIcon />}
+              list={education}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Footer />
+          </Grid>
+        </Grid>
+      </div>
+    </ThemeProvider>
   )
 }
 

@@ -1,6 +1,10 @@
 import React from "react"
 import { CustomPaper } from ".."
-
-const Footer = () => <CustomPaper style={{ padding: 16 }}>Footer</CustomPaper>
+import ProgressItem from "../ProgressItem/"
+const Footer = () => (
+  <CustomPaper style={{ padding: 16 }}>
+    <ProgressItem />
+  </CustomPaper>
+)
 
 export default Footer
