@@ -8,11 +8,9 @@ const BorderLinearProgress = withStyles(theme => ({
     width: "50%",
     minWidth: 300,
     height: 10,
-    backgroundColor: theme.secondery,
   },
   bar: {
     borderRadius: 20,
-    backgroundColor: theme.secondery,
   },
 }))(LinearProgress)
 
@@ -21,7 +19,7 @@ const SkillItem = ({ title, value }) => (
     style={{
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       flexWrap: "wrap",
     }}
   >

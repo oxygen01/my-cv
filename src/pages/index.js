@@ -1,13 +1,21 @@
 import React from "react"
-import { Header, Footer, AboutMe, Table, ListContent } from "../components"
+import {
+  Header,
+  Footer,
+  AboutMe,
+  Table,
+  ListContent,
+  theme,
+  SkillsList,
+} from "../components"
 import { Grid } from "@material-ui/core"
 import { useStaticQuery } from "gatsby"
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined"
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined"
+import CropFreeOutlinedIcon from "@material-ui/icons/CropFreeOutlined"
 
 import { graphql } from "gatsby"
 import { ThemeProvider } from "@material-ui/styles"
-import theme from "../components/themeProvider"
 
 export const query = graphql`
   query CVInfoDataQuery {
@@ -25,12 +33,16 @@ export const query = graphql`
         title
         details
       }
+      skills {
+        skill
+        value
+      }
     }
   }
 `
 const Container = () => {
   const {
-    cvInfoJson: { perosnalData, education },
+    cvInfoJson: { perosnalData, education, skills },
   } = useStaticQuery(query)
 
   return (
@@ -44,17 +56,29 @@ const Container = () => {
             <AboutMe />
           </Grid>
           <Grid item xs={12}>
-            <Table
-              title="Personal data"
-              icon={<InfoOutlinedIcon />}
-              list={perosnalData}
-            />
+            <Grid container justify="center" alignItems="stretch" spacing={3}>
+              <Grid item xs>
+                <Table
+                  title="Personal data"
+                  icon={<InfoOutlinedIcon />}
+                  list={perosnalData}
+                />
+              </Grid>
+              <Grid item xs>
+                <ListContent
+                  title="Education"
+                  icon={<SchoolOutlinedIcon />}
+                  list={education}
+                  bgColor={theme.palette.primary.light}
+                />
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item xs={12}>
-            <ListContent
-              title="Education"
-              icon={<SchoolOutlinedIcon />}
-              list={education}
+            <SkillsList
+              title="Skills"
+              icon={<CropFreeOutlinedIcon />}
+              list={skills}
             />
           </Grid>
           <Grid item xs={12}>

@@ -1,6 +1,5 @@
 {
-  "perosnalData": [
-    {
+  "perosnalData": [{
       "key": "Date of birth",
       "value": "05.1990"
     },
@@ -17,8 +16,7 @@
       "value": "10.2015"
     }
   ],
-  "education": [
-    {
+  "education": [{
       "date": {
         "from": "10.2008",
         "to": "09.2015"
@@ -36,12 +34,63 @@
       "title": "High school, hama/ Syria"
     }
   ],
-  "projects": [
+  "projects": [{
+    "title": "Institution",
+    "titleDetails": "Win program",
+    "technologies": ["PL/SQL", "C#"],
+    "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
+  }],
+  "skills": [{
+      "skill": "JS",
+      "value": 90
+    },
     {
-      "title": "Institution",
-      "titleDetails": "Win program",
-      "technologies": ["PL/SQL", "C#"],
-      "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
+      "skill": "JAVA",
+      "value": 90
+    },
+    {
+      "skill": "PYTHON",
+      "value": 80
+    },
+    {
+      "skill": "SQL/ NoSql",
+      "value": 90
+    },
+    {
+      "skill": "REACT",
+      "value": 90
+    },
+    {
+      "skill": "DJANOG",
+      "value": 70
+    },
+    {
+      "skill": "Android",
+      "value": 90
+    },
+    {
+      "skill": "Test",
+      "value": 90
+    },
+    {
+      "skill": "Docker",
+      "value": 90
+    },
+    {
+      "skill": "DevOps",
+      "value": 90
+    },
+    {
+      "skill": "Desgin patterns",
+      "value": 90
+    },
+    {
+      "skill": "Data structures",
+      "value": 90
+    },
+    {
+      "skill": "Php",
+      "value": 70
     }
   ]
 }
