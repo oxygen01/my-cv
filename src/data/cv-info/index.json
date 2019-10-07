@@ -17,25 +17,80 @@
     }
   ],
   "education": [{
-    "date": {
-      "from": "10.2008",
-      "to": "09.2015"
+      "date": {
+        "from": "10.2008",
+        "to": "09.2015"
+      },
+      "location": "Albaath University, Homs/ Syria",
+      "title": "Bachelor degree in Informatics engineering",
+      "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
     },
-    "location": "Albaath University, Homs/ Syria",
-    "title": "Bachelor degree in Informatics engineering",
-    "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
-  }, {
-    "date": {
-      "from": "07.1996",
-      "to": "07.2008"
-    },
-    "location": "Hama/ Syria",
-    "title": "High school, hama/ Syria"
-  }],
+    {
+      "date": {
+        "from": "07.1996",
+        "to": "07.2008"
+      },
+      "location": "Hama/ Syria",
+      "title": "High school, hama/ Syria"
+    }
+  ],
   "projects": [{
     "title": "Institution",
     "titleDetails": "Win program",
     "technologies": ["PL/SQL", "C#"],
     "details": "Specialization in Software engineering and informations systems. Graduation project: Syrian Airline Android app"
-  }]
+  }],
+  "skills": [{
+      "skill": "JS",
+      "value": 90
+    },
+    {
+      "skill": "JAVA",
+      "value": 90
+    },
+    {
+      "skill": "PYTHON",
+      "value": 80
+    },
+    {
+      "skill": "SQL/ NoSql",
+      "value": 90
+    },
+    {
+      "skill": "REACT",
+      "value": 90
+    },
+    {
+      "skill": "DJANOG",
+      "value": 70
+    },
+    {
+      "skill": "Android",
+      "value": 90
+    },
+    {
+      "skill": "Test",
+      "value": 90
+    },
+    {
+      "skill": "Docker",
+      "value": 90
+    },
+    {
+      "skill": "DevOps",
+      "value": 90
+    },
+    {
+      "skill": "Desgin patterns",
+      "value": 90
+    },
+    {
+      "skill": "Data structures",
+      "value": 90
+    },
+    {
+      "skill": "Php",
+      "value": 70
+    }
+  ]
 }

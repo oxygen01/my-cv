@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Table, TableBody, TableRow, TableCell } from "@material-ui/core"
 import { string } from "postcss-selector-parser"
 import { CustomPaper } from ".."
-import SubHeader from "../subheaderComponent"
+import SubHeader from "../_subheaderComponent"
 
 const TableContent = ({ title, icon, list }) => {
   return (

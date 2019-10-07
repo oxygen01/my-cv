@@ -2,12 +2,13 @@ import React from "react"
 import { Typography, Grid } from "@material-ui/core"
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined"
 import EventOutlinedIcon from "@material-ui/icons/EventOutlined"
-import CodeOutlinedIcon from "@material-ui/icons/CodeOutlined"
+// import CodeOutlinedIcon from "@material-ui/icons/CodeOutlined"
 
 export default ({ item }) => {
   const { title, details, date, location, titleDetails, technologies } = item
   return (
     <>
+      {titleDetails}
       <Typography>{title}</Typography>
       <Grid container spacing={1}>
         <Grid item xs={12}>

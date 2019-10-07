@@ -1,15 +1,13 @@
 import React from "react"
-import { CustomPaper } from ".."
-import { Typography } from "@material-ui/core"
-import SubHeader from "../subheaderComponent"
+import { CustomPaper, SubHeader } from ".."
 import ListContentItem from "./listContentItem"
 
-const ListContent = ({ title, icon, list }) => {
+const ListContent = ({ title, icon, list, bgColor }) => {
   return (
-    <CustomPaper>
+    <CustomPaper bgColor={bgColor}>
       <SubHeader avatar={icon} title={title} />
-      {list.map(item => (
-        <ListContentItem item={item} />
+      {list.map((item, index) => (
+        <ListContentItem key={index} item={item} />
       ))}
     </CustomPaper>
   )
