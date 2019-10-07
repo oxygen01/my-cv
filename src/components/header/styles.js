@@ -5,7 +5,7 @@ export const styles = {
     alignItems: "center",
   },
   profileImage: {
-    width: 200,
-    height: 300,
+    width: 250,
+    height: 250,
   },
 }
