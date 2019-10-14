@@ -47,7 +47,9 @@ const Container = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ backgroundColor: "#F1F3F4" }}>
+      <div
+        style={{ backgroundColor: "#F1F3F4", maxWidth: 1400, margin: "auto" }}
+      >
         <Grid container spacing={3}>
           <Grid item xs={12} justify="center">
             <Header />
@@ -85,7 +87,7 @@ const Container = () => {
               list={skills}
             />
           </Grid>
-          <Grid item lg={6}>
+          <Grid item xs={12}>
             <Footer />
           </Grid>
         </Grid>
