@@ -49,7 +49,7 @@ const Container = () => {
     <ThemeProvider theme={theme}>
       <div style={{ backgroundColor: "#F1F3F4" }}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={12} justify="center">
             <Header />
           </Grid>
           <Grid item xs={12}>

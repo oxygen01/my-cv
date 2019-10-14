@@ -27,7 +27,9 @@ const Header = () => {
   } = useStaticQuery(query)
 
   return (
-    <CustomPaper style={styles.wrapper}>
+    <div
+      style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+    >
       <Avatar style={styles.profileImage} src={profilePic} />
       <Typography variant="h3">{name}</Typography>
       <Typography variant="body2" color="textSecondary" component="p">
@@ -36,7 +38,7 @@ const Header = () => {
       <Typography variant="body2" color="textSecondary" component="p">
         {email}
       </Typography>
-    </CustomPaper>
+    </div>
   )
 }
 export default Header
