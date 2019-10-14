@@ -31,7 +31,7 @@ const Header = () => {
       style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
       <Avatar style={styles.profileImage} src={profilePic} />
-      <Typography variant="h3">{name}</Typography>
+      <Typography variant="h4">{name}</Typography>
       <Typography variant="body2" color="textSecondary" component="p">
         {jobTitle}
       </Typography>

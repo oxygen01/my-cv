@@ -55,36 +55,37 @@ const Container = () => {
           <Grid item xs={12}>
             <AboutMe />
           </Grid>
-          <Grid item xs={12}>
-            <Grid container justify="center" alignItems="stretch" spacing={3}>
-              <Grid item xs>
-                <Table
-                  title="Personal data"
-                  icon={<InfoOutlinedIcon />}
-                  list={perosnalData}
-                  bgColor={theme.palette.primary.light}
-                  borderRadius={16}
-                />
-              </Grid>
-              <Grid item xs>
-                <ListContent
-                  title="Education"
-                  icon={<SchoolOutlinedIcon />}
-                  list={education}
-                  bgColor={theme.palette.secondary.light}
-                  borderRadius={16}
-                />
-              </Grid>
-            </Grid>
+          <Grid item xs={12} lg={6}>
+            <Table
+              title="Personal data"
+              icon={<InfoOutlinedIcon />}
+              list={perosnalData}
+              bgColor={theme.palette.primary.light}
+            />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} lg={6}>
+            <ListContent
+              title="Education"
+              icon={<SchoolOutlinedIcon />}
+              list={education}
+              bgColor={theme.palette.secondary.light}
+            />
+          </Grid>
+          <Grid item xs={12} lg={6}>
             <SkillsList
               title="Skills"
               icon={<CropFreeOutlinedIcon />}
               list={skills}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} lg={6}>
+            <SkillsList
+              title="Skills"
+              icon={<CropFreeOutlinedIcon />}
+              list={skills}
+            />
+          </Grid>
+          <Grid item lg={6}>
             <Footer />
           </Grid>
         </Grid>
