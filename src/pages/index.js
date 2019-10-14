@@ -57,7 +57,7 @@ const Container = () => {
           <Grid item xs={12}>
             <AboutMe />
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6}>
             <Table
               title="Personal data"
               icon={<InfoOutlinedIcon />}
@@ -65,7 +65,7 @@ const Container = () => {
               bgColor={theme.palette.primary.light}
             />
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6}>
             <ListContent
               title="Education"
               icon={<SchoolOutlinedIcon />}
@@ -73,14 +73,14 @@ const Container = () => {
               bgColor={theme.palette.secondary.light}
             />
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6}>
             <SkillsList
               title="Skills"
               icon={<CropFreeOutlinedIcon />}
               list={skills}
             />
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6}>
             <SkillsList
               title="Skills"
               icon={<CropFreeOutlinedIcon />}
