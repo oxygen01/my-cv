@@ -6,8 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "My CV",
-    description: "Personal CV page.",
+    siteUrl: "https://ibrahim-taaloulou.netlify.app",
   },
   plugins: [
     {
@@ -15,6 +14,16 @@ module.exports = {
       options: {},
     },
     "gatsby-transformer-json",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ibrahim-taaloulou.netlify.app",
+        sitemap: "https://ibrahim-taaloulou.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
