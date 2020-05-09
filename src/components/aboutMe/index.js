@@ -4,6 +4,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Typography } from "@material-ui/core"
 import PermIdentityOutlinedIcon from "@material-ui/icons/PermIdentityOutlined"
 import SubHeader from "../_subheaderComponent"
+import { useTranslation } from "react-i18next"
+import { withTrans } from "../../i18n/withTrans"
 
 const query = graphql`
   query AboutMeDataQuery {
@@ -14,14 +16,14 @@ const query = graphql`
   }
 `
 
-const AboutMe = () => {
+const AboutMe = ({ t }) => {
   const {
     aboutMeJson: { title, content },
   } = useStaticQuery(query)
 
   return (
     <CustomPaper elevation={1}>
-      <SubHeader avatar={<PermIdentityOutlinedIcon />} title={title} />
+      <SubHeader avatar={<PermIdentityOutlinedIcon />} title={t(title)} />
       <Typography variant="body2" color="textSecondary" component="p">
         {content}
       </Typography>
@@ -29,4 +31,4 @@ const AboutMe = () => {
   )
 }
 
-export default AboutMe
+export default withTrans(AboutMe)

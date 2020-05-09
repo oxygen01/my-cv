@@ -9,14 +9,13 @@ import {
   SkillsList,
 } from "../components"
 import { Grid } from "@material-ui/core"
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined"
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined"
 import CropFreeOutlinedIcon from "@material-ui/icons/CropFreeOutlined"
-
-import { graphql } from "gatsby"
 import { ThemeProvider } from "@material-ui/styles"
-
+import { withTrans } from "../i18n/withTrans"
+import { Helmet } from "react-helmet"
 export const query = graphql`
   query CVInfoDataQuery {
     cvInfoJson {
@@ -46,53 +45,64 @@ const Container = () => {
   } = useStaticQuery(query)
 
   return (
-    <ThemeProvider theme={theme}>
-      <div
-        style={{ backgroundColor: "#F1F3F4", maxWidth: 1400, margin: "auto" }}
-      >
-        <Grid container spacing={3}>
-          <Grid item xs={12} justify="center">
-            <Header />
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ibrahim Taaloulou</title>
+        <meta
+          name="description"
+          content="Ibrahim Taaloulou software developer"
+        />
+        <link rel="canonical" href="https://ibrahim-taaloulou.netlify.app" />
+      </Helmet>
+      <ThemeProvider theme={theme}>
+        <div
+          style={{ backgroundColor: "#F1F3F4", maxWidth: 1400, margin: "auto" }}
+        >
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Header />
+            </Grid>
+            <Grid item xs={12}>
+              <AboutMe />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Table
+                title="Personal data"
+                icon={<InfoOutlinedIcon />}
+                list={perosnalData}
+                bgColor={theme.palette.primary.light}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <ListContent
+                title="Education"
+                icon={<SchoolOutlinedIcon />}
+                list={education}
+                bgColor={theme.palette.secondary.light}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <SkillsList
+                title="Skills"
+                icon={<CropFreeOutlinedIcon />}
+                list={skills}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <SkillsList
+                title="Skills"
+                icon={<CropFreeOutlinedIcon />}
+                list={skills}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Footer />
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <AboutMe />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Table
-              title="Personal data"
-              icon={<InfoOutlinedIcon />}
-              list={perosnalData}
-              bgColor={theme.palette.primary.light}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <ListContent
-              title="Education"
-              icon={<SchoolOutlinedIcon />}
-              list={education}
-              bgColor={theme.palette.secondary.light}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <SkillsList
-              title="Skills"
-              icon={<CropFreeOutlinedIcon />}
-              list={skills}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <SkillsList
-              title="Skills"
-              icon={<CropFreeOutlinedIcon />}
-              list={skills}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Footer />
-          </Grid>
-        </Grid>
-      </div>
-    </ThemeProvider>
+        </div>
+      </ThemeProvider>
+    </>
   )
 }
 
